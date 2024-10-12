@@ -63,6 +63,52 @@ public:
         return result;
     }
 
+    static uint32_t findMaxSize(double maxSeconds) {
+        uint32_t minSize = 1;
+        uint32_t maxSize = 1;
+
+        // Find matrix size that can be multiplied in MORE than maxSeconds
+        while (true) {
+            Matrix a(maxSize, maxSize);
+            Matrix b(maxSize, maxSize);
+            a.random();
+            b.random();
+
+            clock_t start = clock();
+            a * b;
+            clock_t end = clock();
+
+            double elapsedSeconds = double(end - start) / CLOCKS_PER_SEC;
+            if (elapsedSeconds > maxSeconds) {
+                break;
+            }
+
+            minSize = maxSize;
+            maxSize *= 2;
+        }
+
+        // Binary search for the exact matrix size
+        while (minSize < maxSize) {
+            uint32_t midSize = minSize + (maxSize - minSize) / 2;
+
+            Matrix a(midSize, midSize);
+            Matrix b(midSize, midSize);
+
+            clock_t start = clock();
+            a * b;
+            clock_t end = clock();
+
+            double elapsedSeconds = double(end - start) / CLOCKS_PER_SEC;
+            if (elapsedSeconds > maxSeconds) {
+                maxSize = midSize;
+            } else {
+                minSize = midSize + 1;
+            }
+        }
+
+        return minSize;
+    }
+
 private:
     uint32_t rows;
     uint32_t cols;
@@ -73,31 +119,20 @@ private:
 int main() {
     srand(time(nullptr));
 
-    Matrix a(2, 3);
+    uint32_t maxSize = Matrix::findMaxSize(1.0);
+
+    std::cout << "Max matrix size that can be multiplied in 1 second: " << maxSize << std::endl;
+
+    Matrix a(maxSize, maxSize);
+    Matrix b(maxSize, maxSize);
     a.random();
-    a.print();
-
-    std::cout << std::endl;
-
-    Matrix b(3, 2);
     b.random();
-    b.print();
 
-    std::cout << std::endl;
-
+    clock_t start = clock();
     Matrix c = a * b;
-    c.print();
+    clock_t end = clock();
 
-    std::cout << std::endl;
-
-    Matrix d(2, 2);
-    d.random();
-    d.print();
-
-    std::cout << std::endl;
-
-    Matrix e = a + d;
-    e.print();
+    std::cout << "Elapsed time: " << double(end - start) / CLOCKS_PER_SEC << " seconds" << std::endl;
 
     return 0;
 }

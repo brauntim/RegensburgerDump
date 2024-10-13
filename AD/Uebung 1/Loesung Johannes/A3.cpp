@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdint>
 #include <vector>
+#include <math.h>
 #include <ctime>
 
 
@@ -62,37 +63,44 @@ public:
         }
         return result;
     }
-
-    static uint32_t findMaxSize(double maxSeconds) {
+    
+    static uint32_t findMaxSize(double maxSeconds, int step) {
         uint32_t minSize = 1;
         uint32_t maxSize = 1;
 
         // Find matrix size that can be multiplied in MORE than maxSeconds
         while (true) {
-            Matrix a(maxSize, maxSize);
-            Matrix b(maxSize, maxSize);
-            a.random();
-            b.random();
+            uint32_t size = maxSize * step;
+
+            Matrix a(size, size);
+            Matrix b(size, size);
+
+            std::cout << size << std::endl;
 
             clock_t start = clock();
             a * b;
             clock_t end = clock();
 
-            double elapsedSeconds = double(end - start) / CLOCKS_PER_SEC;
+            uint32_t elapsedSeconds = (end - start) / CLOCKS_PER_SEC;
             if (elapsedSeconds > maxSeconds) {
                 break;
             }
 
             minSize = maxSize;
-            maxSize *= 2;
+            
+            float root3of2 = pow(2, 1.0 / 3);
+            maxSize = (uint32_t)ceilf(maxSize * root3of2);
         }
 
-        // Binary search for the exact matrix size
+        // Binary search for the exact matrix size (LESS than maxSeconds)
         while (minSize < maxSize) {
-            uint32_t midSize = minSize + (maxSize - minSize) / 2;
+            uint32_t midSize = (maxSize + minSize + 1) / 2;
+            uint32_t size = midSize * step;
 
-            Matrix a(midSize, midSize);
-            Matrix b(midSize, midSize);
+            std::cout << size << std::endl;
+
+            Matrix a(size, size);
+            Matrix b(size, size);
 
             clock_t start = clock();
             a * b;
@@ -100,13 +108,13 @@ public:
 
             double elapsedSeconds = double(end - start) / CLOCKS_PER_SEC;
             if (elapsedSeconds > maxSeconds) {
-                maxSize = midSize;
+                maxSize = midSize - 1;
             } else {
-                minSize = midSize + 1;
+                minSize = midSize;
             }
         }
 
-        return minSize;
+        return minSize * step;
     }
 
 private:
@@ -119,9 +127,17 @@ private:
 int main() {
     srand(time(nullptr));
 
-    uint32_t maxSize = Matrix::findMaxSize(1.0);
+    // Returns 1920 in 2 minutes on my machine
+    double seconds = 5.0;
+    uint32_t step = 32;
 
-    std::cout << "Max matrix size that can be multiplied in 1 second: " << maxSize << std::endl;
+    clock_t start1 = clock();
+    uint32_t maxSize = Matrix::findMaxSize(seconds, step);
+    clock_t end1 = clock();
+
+    std::cout << "Elapsed time for findMaxSize: " << double(end1 - start1) / CLOCKS_PER_SEC << " seconds" << std::endl;
+
+    std::cout << "Max matrix size that can be multiplied in " << seconds << " second(s): " << maxSize << std::endl;
 
     Matrix a(maxSize, maxSize);
     Matrix b(maxSize, maxSize);

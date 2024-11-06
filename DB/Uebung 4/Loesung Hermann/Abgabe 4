@@ -1,0 +1,33 @@
+CREATE TABLE bestellung (
+ bestell_nr SERIAL PRIMARY KEY, zeit TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+  
+ CREATE TABLE koordinaten(
+  bestell_nr INT PRIMARY KEY REFERENCES bestellung(bestell_nr) 
+  ON DELETE CASCADE, lon FLOAT NOT NULL, lat FLOAT NOT NULL
+  );
+  
+ CREATE TABLE gericht(
+  gericht_nr INT PRIMARY KEY, bezeichnung VARCHAR(100) NOT NULL, 
+  preis DECIMAL(12,2) NOT NULL
+ );
+ 
+ CREATE TABLE zutaten(
+ gericht_nr INT REFERENCES gericht(gericht_nr) ON DELETE CASCADE,
+   zutat VARCHAR(100) NOT NULL, PRIMARY KEY(gericht_nr, zutat)
+ );
+  
+  CREATE TABLE pizza(
+  gericht_nr INT PRIMARY KEY REFERENCES gericht(gericht_nr) ON DELETE CASCADE,
+    durchmesser INT CHECK(durchmesser >= 0)
+  );
+  
+  CREATE TABLE besteht_aus(
+  bestell_nr INT REFERENCES bestellung(bestell_nr) ON DELETE CASCADE,
+  gericht_nr INT REFERENCES gericht(gericht_nr),
+  anzahl INT NOT NULL CHECK(anzahl >= 1), 
+  PRIMARY KEY(bestell_nr, gericht_nr) 
+  );
+  
+
+  

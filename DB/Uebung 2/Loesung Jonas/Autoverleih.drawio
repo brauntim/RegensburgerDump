@@ -1,0 +1,219 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0" version="24.7.17">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel dx="1635" dy="1014" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-29" value="Kunde" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-30" value="Buchung" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="480" y="430" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-31" value="Fahrzeug" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="660" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-32" value="Modell" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="920" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-35" value="erstellt" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="470" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-36" value="enthält" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="470" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-37" value="ist" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="210" y="790" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-38" value="favorisiert" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="210" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-39" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-35" target="uztpz2-HDUIGuBuy-SRC-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="320" as="sourcePoint" />
+            <mxPoint x="480" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-40" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="uztpz2-HDUIGuBuy-SRC-39">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-41" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-35" target="uztpz2-HDUIGuBuy-SRC-30">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="420" as="sourcePoint" />
+            <mxPoint x="580" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-42" value="N" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="uztpz2-HDUIGuBuy-SRC-41">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="10" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-43" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-36" target="uztpz2-HDUIGuBuy-SRC-30">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="540" as="sourcePoint" />
+            <mxPoint x="520" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-44" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="uztpz2-HDUIGuBuy-SRC-43">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="10" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-45" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-36" target="uztpz2-HDUIGuBuy-SRC-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="610" as="sourcePoint" />
+            <mxPoint x="400" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-46" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="uztpz2-HDUIGuBuy-SRC-45">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="25" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-47" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-37" target="uztpz2-HDUIGuBuy-SRC-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="890" as="sourcePoint" />
+            <mxPoint x="420" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-48" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="uztpz2-HDUIGuBuy-SRC-47">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-49" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-37" target="uztpz2-HDUIGuBuy-SRC-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="750" as="sourcePoint" />
+            <mxPoint x="370" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-50" value="0...11" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="uztpz2-HDUIGuBuy-SRC-49">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="-10" y="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-51" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-38" target="uztpz2-HDUIGuBuy-SRC-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="340" as="sourcePoint" />
+            <mxPoint x="380" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-52" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="uztpz2-HDUIGuBuy-SRC-51">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="-10" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-53" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-38" target="uztpz2-HDUIGuBuy-SRC-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="600" as="sourcePoint" />
+            <mxPoint x="330" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-54" value="N" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="uztpz2-HDUIGuBuy-SRC-53">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="20" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-58" value="KundenNr" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-59" value="EMail" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-60" value="Passwort" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="80" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-61" value="BuchungsNr" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="600" y="320" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-62" value="Buchungsdatum" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="700" y="380" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-63" value="Startdatum" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="700" y="470" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-64" value="Enddatum" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="600" y="530" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-65" value="Marke" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="50" y="920" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-66" value="Bezeichnung" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1000" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-67" value="Preis" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1000" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-68" value="FahrzeugNr" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="50" y="660" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-69" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-59" target="uztpz2-HDUIGuBuy-SRC-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="160" as="sourcePoint" />
+            <mxPoint x="290" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-70" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-58" target="uztpz2-HDUIGuBuy-SRC-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50" y="310" as="sourcePoint" />
+            <mxPoint x="210" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-71" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-60" target="uztpz2-HDUIGuBuy-SRC-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="150" as="sourcePoint" />
+            <mxPoint x="530" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-72" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-30" target="uztpz2-HDUIGuBuy-SRC-61">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="339.38" as="sourcePoint" />
+            <mxPoint x="490" y="339.38" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-73" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-30" target="uztpz2-HDUIGuBuy-SRC-62">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="530" as="sourcePoint" />
+            <mxPoint x="530" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-74" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-30" target="uztpz2-HDUIGuBuy-SRC-63">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="520" as="sourcePoint" />
+            <mxPoint x="500" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-75" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-30" target="uztpz2-HDUIGuBuy-SRC-64">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="550" as="sourcePoint" />
+            <mxPoint x="500" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-76" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-68" target="uztpz2-HDUIGuBuy-SRC-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-20" y="610" as="sourcePoint" />
+            <mxPoint x="140" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-77" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-65" target="uztpz2-HDUIGuBuy-SRC-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10" y="860" as="sourcePoint" />
+            <mxPoint x="170" y="860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-78" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-66" target="uztpz2-HDUIGuBuy-SRC-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="30" y="980" as="sourcePoint" />
+            <mxPoint x="190" y="980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uztpz2-HDUIGuBuy-SRC-79" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="uztpz2-HDUIGuBuy-SRC-32" target="uztpz2-HDUIGuBuy-SRC-67">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="930" as="sourcePoint" />
+            <mxPoint x="560" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,10 @@
+1. Falsch
+2. Falsch
+3. Richtig
+4. Richtig
+5. Falsch
+6. Richtig
+7. Falsch
+8. Richtig
+9. Richtig
+10. Falsch

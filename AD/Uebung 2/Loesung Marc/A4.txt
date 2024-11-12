@@ -1,4 +1,0 @@
-1.  richtig, da 2^k schneller wächst als k^2 und sich die Summe daher einem Grenzwert annähert => konstant
-2.  richtig, da n^m polynomial mit n wächst, a^n aber exponentiell => exp. schneller wachsend als pol.
-3.  richtig, da n ln n schneller wächst als n, aber langsamer als jedes n^(1+x) mit x>0 => n ln n asymptotisch kleiner als n^1,5
-4.  richtig, da 5^(log3n) = n^(log35) => log35 ist eine konstante kleiner als 2, da log39 = 2 => n^(log35) wächst langsamer als n^2

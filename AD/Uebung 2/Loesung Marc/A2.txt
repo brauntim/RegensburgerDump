@@ -1,9 +1,0 @@
-1.  richtig, da 54 eine Konstante ist
-2.  richtig, da 2n^3 führender Term
-            und bei n gegen unendlich wird 4n^2 + 8n + 3 vernachlässigbar
-3.  falsch, da -5n^1,25 viel schneller wächst als n^0,5
-4.  richtig, da 4^n+1 nur ein konstanter Faktor von 4^n, also ist 4^n+1 in O(4^n)
-5.  richtig, da jede Funktion per Def in O von sich selbst
-6.  richtig, da log(n)! nach Stirling rund n log n - n => 2log(n)! rund 2n log n - 2n => wächst asymptotisch wie n log n, wenn man kleinere Terme vernachllässigt
-7.  richtig, da n! nach Stirling rund sqrt(2PIn)(n/e)^n => n! wächst schneller als 2^n
-8.  richtig, da n! rund (siehe 7) => (n/e) liegt im gleichen Wachstumsbereich wie n^n und zusätzliche Faktoren sind kleinere Terme => n! asymptotisch genauso schnell wachsend wie n^nach

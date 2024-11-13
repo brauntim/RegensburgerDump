@@ -4,7 +4,7 @@
 
 Videos(vnr, titel, genre, sprache)
 
-Schlagworte(vnr, schlagwot)
+Schlagworte(vnr, schlagwort)
 
 Schlagworte.vnr ist ein Fremdschlüssel auf Videos.vnr
 
@@ -17,12 +17,12 @@ Schlagworte.vnr ist ein Fremdschlüssel auf Videos.vnr
 
 ## Nun die Schätzungen wie viele Zeilen die folgenden Ausdrücke liefern.
 
-1. πvnr(Schlagworte) = 400.000.000
+1. πvnr(Schlagworte) = 50.000.000
 
-2. σgenre='Musik' ∨ genre = 'Musikvideo'(Videos) =>
+2. σgenre='Musik' ∨ genre = 'Musikvideo'(Videos) => 0,1(2/20) * 100.000.000 = 10.000.000
 
-3. σgenre='Musik' ∧ sprache = 'Deutsch'(Videos) =>
+3. σgenre='Musik' ∧ sprache = 'Deutsch'(Videos) => (1/20 * 1/25) * 100.000.000 = 1/500 * 100.000.000 = 200.000
 
-4. Videos ⋈Videos.vnr = Schlagworte.vnr Schlagworte =>
+4. Videos ⋈ Videos.vnr = Schlagworte.vnr(Schlagworte) => 
 
-5. πvnr, titel σSchlagworte.schlagwort='lustig'(Videos ⋈Videos.vnr = Schlagworte.vnr Schlagworte) =>
+5. πvnr, titel σSchlagworte.schlagwort='lustig'((Videos) ⋈Videos.vnr = Schlagworte.vnr (Schlagworte)) =>

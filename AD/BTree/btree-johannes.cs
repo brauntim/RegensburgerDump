@@ -1,11 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 class BTreeNode {
     public int t;
@@ -18,12 +10,29 @@ class BTreeNode {
         children = new List<BTreeNode>(t + 1);
     }
 
+    public void PrintTree(string prefix = "", int mode = 1) {
+        string connector = mode == -1 ? "┌─  " : (mode == 0 ? "├─  " : "└─  ");
+        string branchUp = mode < 1 ? "|   " : "    ";
+        string branchDown = mode > -1 ? "|   " : "    ";
+
+        if (this.children.Count == 0) {
+            Console.WriteLine(prefix + connector + string.Join(", ", this.data));
+            return;
+        }
+
+        this.children[0].PrintTree(prefix + branchDown, -1);
+        Console.WriteLine(prefix + connector + this.data[0]);
+        for (int i = 1; i < this.children.Count - 1; i++) {
+            this.children[i].PrintTree(prefix + branchUp, 0);
+            Console.WriteLine(prefix + branchUp + this.data[i]);
+        }
+        this.children[this.children.Count - 1].PrintTree(prefix + branchUp, 1);
+    }
+
     public (BTreeNode? l, int root, BTreeNode? r) Insert(int data) {
         // Find insertion index
-        int i;
-        for (i = 0; i < this.data.Count; i++) {
-            if (data < this.data[i]) break;
-        }
+        int i = this.data.FindIndex(d => d >= data);
+        if (i == -1) i = this.data.Count;
 
         // Insert into Leaf
         if (children.Count == 0) {
@@ -57,56 +66,95 @@ class BTreeNode {
         return (null, -1, null);
     }
 
-private string GetConnector(int mode) {
-    if (mode == -1) return "┌─  ";
-    if (mode == 0) return "├─  ";
-    return "└─  ";
-}
+    private int FindSmallest() =>
+        this.children.Count == 0 ? this.data[0] : this.children[0].FindSmallest();
 
-public void PrintTree(string prefix = "", int mode = 1) {
-    if (this.children.Count == 0) {
-        Console.WriteLine(prefix + GetConnector(mode) + string.Join(", ", this.data));
-        return;
+    public void Delete(int data, BTreeNode? parent, int idxInParent) {
+        // Find deletion index
+        int i = this.data.FindIndex(d => d >= data);
+        if (i == -1) i = this.data.Count;
+        bool isEqual = i < this.data.Count && this.data[i] == data;
+
+
+        // Delete from leaf
+        if (this.children.Count == 0) {
+            // Item was not found, nothing to delete
+            if (!isEqual) return;
+
+            this.data.RemoveAt(i);
+        }
+
+        // Replace with inorder successor and delete
+        else if (isEqual) {
+            int successor = this.children[i+1].FindSmallest();
+            this.data[i] = successor;
+            this.children[i+1].Delete(successor, this, i+1);
+        }
+
+        // Delete from child
+        else {
+            this.children[i].Delete(data, this, i);
+        }
+
+
+        // Node has enough elements
+        int minChildren = (t - 1) / 2;
+        if (this.data.Count >= minChildren) return;
+
+
+        // Move or union
+        if (parent is null) return;
+        
+        // Right child exists
+        if (idxInParent < parent.children.Count - 1 &&
+                parent.children[idxInParent + 1].data.Count > minChildren) {
+            BTreeNode rightChild = parent.children[idxInParent + 1];
+
+            int successorData = rightChild.data[0];
+            rightChild.data.RemoveAt(0);
+
+            if (this.children.Count > 0) {
+                this.children.Add(rightChild.children[0]);
+                rightChild.children.RemoveAt(0);
+            }
+
+            this.data.Add(parent.data[idxInParent]);
+            parent.data[idxInParent] = successorData;
+
+            return;
+        } 
+
+        // Left child exists
+        if (idxInParent > 0 &&
+                parent.children[idxInParent - 1].data.Count > minChildren) {
+            BTreeNode leftChild = parent.children[idxInParent - 1];
+
+            int predecessorData = leftChild.data[leftChild.data.Count - 1];
+            leftChild.data.RemoveAt(leftChild.data.Count - 1);
+
+            if (this.children.Count > 0) {
+                this.children.Insert(0, leftChild.children[leftChild.children.Count - 1]);
+                leftChild.children.RemoveAt(leftChild.children.Count - 1);
+            }
+
+            this.data.Insert(0, parent.data[idxInParent - 1]);
+            parent.data[idxInParent - 1] = predecessorData;
+
+            return;
+        }
+
+        // Move merge index left if right does not exist
+        if (idxInParent == parent.children.Count - 1) {
+            idxInParent--;
+        }
+
+        // Merge idx and idx+1
+        parent.children[idxInParent].data.Add(parent.data[idxInParent]);
+        parent.children[idxInParent].data.AddRange(parent.children[idxInParent + 1].data);
+        parent.children[idxInParent].children.AddRange(parent.children[idxInParent + 1].children);
+        parent.data.RemoveAt(idxInParent);
+        parent.children.RemoveAt(idxInParent + 1);
     }
-
-    this.children[0].PrintTree(prefix + (mode < -1 ? "|   " : "    "), -1);
-    Console.WriteLine(prefix + "┌─  " + this.data[0]);
-    for (int i = 1; i < this.data.Count - 1; i++) {
-        this.children[i].PrintTree(prefix + "|   ", 0);
-        Console.WriteLine(prefix + "├─  " + this.data[i]);
-    }
-    if (this.children.Count > 1) {
-        Console.WriteLine(prefix + "└─  " + this.data[this.data.Count - 1]);
-    }
-    this.children[this.children.Count - 1].PrintTree(prefix + (mode > 1 ? "|   " : "    "), 1);
-}
-
-
-
-    // void PrintTree(const string& prefix = "", bool isLeft = true) const {
-    //     if (right) {
-    //         right->PrintTree(prefix + (isLeft ? "│   " : "    "), false);
-    //     }
-
-    //     cout << prefix << (isLeft ? "└── " : "┌── ") << data << endl;
-
-    //     if (left) {
-    //         left->PrintTree(prefix + (isLeft ? "    " : "│   "), true);
-    //     }
-    // }
-
-//    ┌─ 1
-// ┌─ 2
-// |  ├─ 3
-// |  4
-// |  └─ 5, 6
-// 7
-// |  ┌─ 8, 9
-// └─ 10
-//    ├─ 11
-//    12
-//    └─ 13
-
 }
 
 public class BTree {
@@ -129,6 +177,13 @@ public class BTree {
         }
     }
 
+    public void Delete(int data) {
+        this.root.Delete(data, null, -1);
+        if (this.root.data.Count == 0 && this.root.children.Count > 0) {
+            this.root = this.root.children[0];
+        }
+    }
+
     public void PrintTree() {
         root.PrintTree();
     }
@@ -136,12 +191,25 @@ public class BTree {
 
 public static class Program {
     public static void Main() {
+        Console.OutputEncoding = System.Text.Encoding.GetEncoding(65001);
+        Console.InputEncoding  = System.Text.Encoding.GetEncoding(65001);
+
+        Random r = new(0); // Seed 0 for reproducibility
+
+        List<int> numbers = Enumerable.Range(1, 50).ToList();
+        List<int> shuffled = numbers.OrderBy(x => r.Next()).ToList();
+        List<int> toDelete = shuffled.OrderBy(x => r.Next()).Take(30).ToList();
+
         BTree root = new(3);
-        List<int> numbers = Enumerable.Range(1, 10).ToList();
-        for (int i = 0; i < numbers.Count; i++) {
-            root.Insert(numbers[i]);
+        for (int i = 0; i < shuffled.Count; i++) {
+            Console.WriteLine("\nInserting: " + shuffled[i]);
+            root.Insert(shuffled[i]);
             root.PrintTree();
-            Console.WriteLine();
+        }
+        for (int i = 0; i < toDelete.Count; i++) {
+            Console.WriteLine("\nDeleting: " + toDelete[i]);
+            root.Delete(toDelete[i]);
+            root.PrintTree();
         }
     }
 }

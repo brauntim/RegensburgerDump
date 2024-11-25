@@ -1,5 +1,8 @@
 
-class BTreeNode {
+using System.Collections;
+using System.Diagnostics.CodeAnalysis;
+
+class BTreeNode: IEquatable<BTreeNode> {
     public int t;
     public List<int> data;
     public List<BTreeNode> children;
@@ -155,9 +158,35 @@ class BTreeNode {
         parent.data.RemoveAt(idxInParent);
         parent.children.RemoveAt(idxInParent + 1);
     }
+
+
+    public override bool Equals(object? obj)
+    {
+        return obj is BTreeNode node && this.Equals(node);
+    }
+
+    public bool Equals(BTreeNode? other)
+    {
+        if (other is null) return false;
+        if (this.t != other.t || this.data.Count != other.data.Count) return false;
+        for (int i = 0; i < this.data.Count; i++) {
+            if (this.data[i] != other.data[i]) return false;
+        }
+        for (int i = 0; i < this.children.Count; i++) {
+            if (!this.children[i].Equals(other.children[i])) return false;
+        }
+        return true;
+    }
+
+    public override int GetHashCode()
+    {
+        int dataHash = this.data.Select(x => x.GetHashCode()).DefaultIfEmpty(0).Aggregate((x, y) => HashCode.Combine(x, y));
+        int childrenHash = this.children.Select(x => x.GetHashCode()).DefaultIfEmpty(0).Aggregate((x, y) => HashCode.Combine(x, y));
+        return HashCode.Combine(t.GetHashCode(), dataHash, childrenHash);
+    }
 }
 
-public class BTree {
+public class BTree: IEquatable<BTree> {
     BTreeNode root;
     int t;
 
@@ -187,29 +216,73 @@ public class BTree {
     public void PrintTree() {
         root.PrintTree();
     }
+
+
+    public override bool Equals(object? obj) => obj is BTree tree && this.Equals(tree);
+    public bool Equals(BTree? other) => other is not null && this.root.Equals(other.root);
+    public override int GetHashCode() => root.GetHashCode();
 }
 
 public static class Program {
+    public static void Aufgabe23() {
+        List<int> numbers = [13, 16, 10, 11, 24, 4, 12, 2, 15, 18, 22, 26, 17, 14, 25, 1, 7, 3, 21, 8, 19, 5, 13, 6, 20, 9];
+
+        BTree tree = new(5);
+        foreach (var number in numbers) {
+            Console.WriteLine("\nInserting: " + number);
+            tree.Insert(number);
+            tree.PrintTree();
+        }
+        
+        foreach (var number in numbers.OrderBy(x => -x)) {
+            Console.WriteLine("\nDeleting: " + number);
+            tree.Delete(number);
+            tree.PrintTree();
+        }
+    }
+
+
+    public static List<List<T>> GetPermutations<T>(List<T> values) {
+        if (values.Count == 1) return [values];
+        return values.SelectMany(v => {
+            List<T> vl = [v];
+            var remaining = values.Except(vl).ToList();
+            return GetPermutations(remaining).Select(p => vl.Concat(p).ToList());
+        }).ToList();
+    }
+
+    public static void Aufgabe4() {
+        // FUNKTIONIERT NICHT --- generiert nicht alle möglichen Bäume
+        Console.WriteLine("## Aufgabe 4\n");
+
+        HashSet<BTree> uniqueTrees = new();
+
+        List<int> numbers = [1, 3, 4, 5, 7];
+
+        // Iterate through all permutations of the numbers
+        foreach (var permutation in GetPermutations(numbers)) {
+            BTree tree = new(4);
+            foreach (var number in permutation) {
+                tree.Insert(number);
+            }
+            uniqueTrees.Add(tree);
+        }
+
+        Console.WriteLine("Number of unique trees: " + uniqueTrees.Count);
+
+        // Print all unique trees
+        foreach (var tree in uniqueTrees) {
+            tree.PrintTree();
+            Console.WriteLine();
+        }
+    }
+
+    
     public static void Main() {
         Console.OutputEncoding = System.Text.Encoding.GetEncoding(65001);
         Console.InputEncoding  = System.Text.Encoding.GetEncoding(65001);
 
-        Random r = new(0); // Seed 0 for reproducibility
-
-        List<int> numbers = Enumerable.Range(1, 50).ToList();
-        List<int> shuffled = numbers.OrderBy(x => r.Next()).ToList();
-        List<int> toDelete = shuffled.OrderBy(x => r.Next()).Take(30).ToList();
-
-        BTree root = new(3);
-        for (int i = 0; i < shuffled.Count; i++) {
-            Console.WriteLine("\nInserting: " + shuffled[i]);
-            root.Insert(shuffled[i]);
-            root.PrintTree();
-        }
-        for (int i = 0; i < toDelete.Count; i++) {
-            Console.WriteLine("\nDeleting: " + toDelete[i]);
-            root.Delete(toDelete[i]);
-            root.PrintTree();
-        }
+        Aufgabe23();
+        // Aufgabe4();
     }
 }

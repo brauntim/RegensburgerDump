@@ -1,0 +1,6 @@
+Ein minimaler RS-Baum mit bh(v)=4 ist ein vollständiger Binärbaum der Höhe 4 mit ausschließlich schwarzen Nodes.
+
+Der kürzestmögliche Pfad in einem RS-Baum ist bh(v), da er nur schwarze Nodes enthält.
+Der längstmögliche Pfad in einem RS-Baum enthält abwechselnd rote und schwarze Nodes.
+Dabei ist die Wurzel schwarz (um die minimale Höhe beizubehalten), danach folgt rot, schwarz, rot, ..., rot, NIL.
+Das bedeutet, dass der Pfad bh(v) + bh(v) = 2bh(v) lang ist.

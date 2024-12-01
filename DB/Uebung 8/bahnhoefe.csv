@@ -1,4 +1,4 @@
-Bundesland;RB;BM;Bf. Nr.;Station;Bf DS 100Abk.;Kat. Vst;Straße;PLZ;Ort;Aufgabenträger
+bundesland;rb;Bm;bf_nr;station;bf_abk;kat_vst;strasse;plz;ort;aufgabentraeger
 Hessen;RB Mitte;Darmstadt;119;Altheim (Hess);FAT;6;Münstererstr. 19;64839;Münster;Rhein-Main-Verkehrsverbund GmbH
 Hessen;RB Mitte;Darmstadt;201;Assmannshausen;FAH;5;Bahnhofstr. 1;65385;Rüdesheim am Rhein;Rhein-Main-Verkehrsverbund GmbH
 Hessen;RB Mitte;Darmstadt;230;Auringen-Medenbach;FAM;6;August-Ruf-Straße 50;65207;Wiesbaden;Rhein-Main-Verkehrsverbund GmbH

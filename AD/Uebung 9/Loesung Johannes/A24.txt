@@ -1,0 +1,47 @@
+Aufgabe 2:
+
+Table size: 1000
+  172: Value(65)
+  318: Value(62)
+  554: Value(64)
+  700: Value(61)
+  936: Value(63)
+
+
+Aufgabe 4:
+
+Linear probing:
+Table size: 11
+  0: Value(22)
+  1: Value(88)
+  3: Value(59)
+  4: Value(4)
+  5: Value(15)
+  6: Value(28)
+  7: Value(17)
+  9: Value(31)
+  10: Value(10)
+
+Quadratic probing:
+Table size: 11
+  0: Value(22)
+  1: Value(15)
+  2: Value(59)
+  3: Value(17)
+  4: Value(4)
+  6: Value(28)
+  8: Value(88)
+  9: Value(31)
+  10: Value(10)
+
+Double hashing:
+Table size: 11
+  0: Value(22)
+  1: Value(88)
+  4: Value(4)
+  5: Value(15)
+  6: Value(28)
+  7: Value(17)
+  8: Value(59)
+  9: Value(31)
+  10: Value(10)

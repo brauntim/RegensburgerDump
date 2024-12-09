@@ -9,7 +9,7 @@
 2. Falsch
 3. Falsch (Konsistent)
 4. Falsch (Dirty Read)
-5. Richtig
+5. Falsch
 
 ### b.
 

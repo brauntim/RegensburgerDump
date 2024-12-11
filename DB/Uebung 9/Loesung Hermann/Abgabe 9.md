@@ -24,7 +24,7 @@
 
 w1(x), w2(x), r2(y), r1(y), w3(y), c1, c2, c3
 
-- Wahr
+- Falsch
 
 #### 7. Wird bei der Historie aus der vorherigen Frage das SW-Sperrverfahren eingesetzt, muss TA2 warten, bevor sie in x schreiben darf.
 

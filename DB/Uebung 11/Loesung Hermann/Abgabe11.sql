@@ -18,7 +18,7 @@ END;
 $$
 LANGUAGE plpgsql;
 
-
+-- Die größtmögliche Zahl: 12
 
 -- Meine Lösung 
 

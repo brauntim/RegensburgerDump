@@ -1,8 +1,8 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class SortList {
-
     public static void main(String[] args) throws Exception {
         List<Person> list = new ArrayList<>();
         
@@ -21,11 +21,27 @@ public class SortList {
         list.add(person3);
         list.add(person4);
 
+        System.out.println("Unsorted:");
+
         for (Person person : list) {
-            printf()
+            System.out.println(person.getName() + " " 
+            + person.getSize() + " " 
+            + person.getJob().getName() + " " 
+            + person.getJob().getSalary());
         }
 
-        
+        Collections.sort(list);
+
+        System.out.println("Sorted:");
+        for (Person person : list) {
+            System.out.println(person.getName() + " " 
+            + person.getSize() + " " 
+            + person.getJob().getName() + " " 
+            + person.getJob().getSalary());
+        }
+
+
+       
         
     }
 }

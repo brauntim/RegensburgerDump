@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="src/uebung_9_2/apache-log4j-2.12.1-bin/log4j-api-2.12.1.jar"/>
+	<classpathentry kind="lib" path="src/uebung_9_2/apache-log4j-2.12.1-bin/log4j-core-2.12.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -8,10 +8,10 @@ public class Job {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public double getSalary() {
-        return this.salary;
+        return salary;
     }
 }

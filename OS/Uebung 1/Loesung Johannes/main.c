@@ -21,3 +21,5 @@ int main() {
 
     return 0;
 }
+
+// Das Betriebssystem kann mein Programm beenden, indem es SIGTERM sendet.

@@ -16,7 +16,6 @@ public class Main {
             while (rs.next()) {
                 System.out.printf("%s %s\n", rs.getString(1), rs.getString(2));
             }
-
             con.close();
             st.close();
             rs.close();

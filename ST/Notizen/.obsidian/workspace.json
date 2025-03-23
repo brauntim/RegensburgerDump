@@ -1,0 +1,185 @@
+{
+  "main": {
+    "id": "6e3e10be7cd5f1c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "239d2dbc77bfb6ee",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "65747604518d967e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kartesisches Produkt von Mengen.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Kartesisches Produkt von Mengen"
+            }
+          },
+          {
+            "id": "dd532aa6e9b8e7ea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kartesisches Produkt von Mengen.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Kartesisches Produkt von Mengen"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "22d36e715688ef5b",
+    "type": "split",
+    "children": [
+      {
+        "id": "7b788830652f90b5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4312c86c95a5ff63",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "33fc3746293cd9df",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "985a19d06d95d62b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "72846a16431bf3e9",
+    "type": "split",
+    "children": [
+      {
+        "id": "936ed5543b56f4c7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ebd613748ec2636c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Kartesisches Produkt von Mengen.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Kartesisches Produkt von Mengen"
+            }
+          },
+          {
+            "id": "167da897ce20d98f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Kartesisches Produkt von Mengen.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Kartesisches Produkt von Mengen"
+            }
+          },
+          {
+            "id": "0a48f25b8852ace9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "cbf83d2ddf6e9978",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Kartesisches Produkt von Mengen.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Kartesisches Produkt von Mengen"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "dd532aa6e9b8e7ea",
+  "lastOpenFiles": [
+    "Kartesisches Produkt von Mengen.md"
+  ]
+}

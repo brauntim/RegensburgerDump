@@ -1,0 +1,13 @@
+g1 = !yr1 * t
+g1w = !yr1 * !t
+g2 = !g1 * t
+g2w = !g1 * !t
+g3 = !g2 * t + !g3 * !t
+g3w = !g2 * !t
+y1 = !g3 * t + !g3w
+r1 = !y1
+r2 = !r1
+yr1 = !r2
+g = !g1 + !g2 + !g3 + !g1w + !g2w + !g3w
+y = !y1 + !yr1
+r = !r1 + !r2 + !yr1

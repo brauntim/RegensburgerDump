@@ -1,0 +1,50 @@
+
+Test sortieren mit quick Sort
+Sortierung von 150000 Zahlen in 0.000000 Sekunden
+Sortierung von 225000 Zahlen in 0.000000 Sekunden
+Sortierung von 337500 Zahlen in 0.000000 Sekunden
+Sortierung von 506250 Zahlen in 0.000000 Sekunden
+Sortierung von 759375 Zahlen in 0.000000 Sekunden
+Sortierung von 1139062 Zahlen in 0.000000 Sekunden
+Sortierung von 1708593 Zahlen in 0.000000 Sekunden
+Sortierung von 2562889 Zahlen in 1.000000 Sekunden
+Sortierung von 3844333 Zahlen in 0.000000 Sekunden
+Sortierung von 5766499 Zahlen in 0.000000 Sekunden
+Sortierung von 8649748 Zahlen in 0.000000 Sekunden
+Sortierung von 12974622 Zahlen in 1.000000 Sekunden
+Sortierung von 19461933 Zahlen in 1.000000 Sekunden
+Sortierung von 29192899 Zahlen in 3.000000 Sekunden
+Sortierung von 43789348 Zahlen in 4.000000 Sekunden
+Sortierung von 65684022 Zahlen in 6.000000 Sekunden
+Sortierung von 98526033 Zahlen in 9.000000 Sekunden
+Sortierung von 147789049 Zahlen in 14.000000 Sekunden
+Sortierung von 221683573 Zahlen in 22.000000 Sekunden
+Sortierung von 332525359 Zahlen in 32.000000 Sekunden
+Sortierung von 498788038 Zahlen in 50.000000 Sekunden
+Sortierung von 748182057 Zahlen in 76.000000 Sekunden
+Sortierung von 623485047 Zahlen in 62.000000 Sekunden
+Test sortieren mit bubble Sort
+Sortierung von 150000 Zahlen in 57.000000 Sekunden
+
+Test sortieren mit merge Sort
+Sortierung von 150000 Zahlen in 0.000000 Sekunden
+Sortierung von 225000 Zahlen in 0.000000 Sekunden
+Sortierung von 337500 Zahlen in 0.000000 Sekunden
+Sortierung von 506250 Zahlen in 0.000000 Sekunden
+Sortierung von 759375 Zahlen in 0.000000 Sekunden
+Sortierung von 1139062 Zahlen in 0.000000 Sekunden
+Sortierung von 1708593 Zahlen in 0.000000 Sekunden
+Sortierung von 2562889 Zahlen in 0.000000 Sekunden
+Sortierung von 3844333 Zahlen in 0.000000 Sekunden
+Sortierung von 5766499 Zahlen in 1.000000 Sekunden
+Sortierung von 8649748 Zahlen in 1.000000 Sekunden
+Sortierung von 12974622 Zahlen in 1.000000 Sekunden
+Sortierung von 19461933 Zahlen in 2.000000 Sekunden
+Sortierung von 29192899 Zahlen in 3.000000 Sekunden
+Sortierung von 43789348 Zahlen in 5.000000 Sekunden
+Sortierung von 65684022 Zahlen in 7.000000 Sekunden
+Sortierung von 98526033 Zahlen in 10.000000 Sekunden
+Sortierung von 147789049 Zahlen in 16.000000 Sekunden
+Sortierung von 221683573 Zahlen in 26.000000 Sekunden
+Sortierung von 332525359 Zahlen in 38.000000 Sekunden
+Sortierung von 498788038 Zahlen in 59.000000 Sekunden

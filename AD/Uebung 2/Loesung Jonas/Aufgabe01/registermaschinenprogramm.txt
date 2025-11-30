@@ -1,0 +1,8 @@
+JMP 3
+OUT 1
+HALT 99
+INP 0
+JEZ 1 #Jump zu HALT wenn Input gleich 0
+ADD 1
+STA 1
+JMP 3

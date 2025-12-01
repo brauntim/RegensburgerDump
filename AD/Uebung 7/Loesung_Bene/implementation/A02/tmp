@@ -1,0 +1,23 @@
+binSearchTree.cpp:9:6: error: no declaration matches ‘void binSearchTree::node::descendInPreOrder(int*, int*, int, int, int&)’
+    9 | void binSearchTree::node::descendInPreOrder(int *inorder, int *preorder, int inStart, int inEnd, int &index) {
+      |      ^~~~~~~~~~~~~
+In file included from binSearchTree.cpp:1:
+binSearchTree.hpp:10:15: note: candidate is: ‘binSearchTree::node* binSearchTree::node::descendInPreOrder(int*, int*, int, int, int&)’
+   10 |         node* descendInPreOrder(int*, int*, int, int, int&);
+      |               ^~~~~~~~~~~~~~~~~
+binSearchTree.hpp:2:12: note: ‘struct binSearchTree::node’ defined here
+    2 |     struct node {
+      |            ^~~~
+binSearchTree.cpp:9:6: error: ‘struct binSearchTree::node’ is private within this context
+    9 | void binSearchTree::node::descendInPreOrder(int *inorder, int *preorder, int inStart, int inEnd, int &index) {
+      |      ^~~~~~~~~~~~~
+binSearchTree.hpp:2:12: note: declared private here
+    2 |     struct node {
+      |            ^~~~
+binSearchTree.cpp: In function ‘binSearchTree createTree(int*, int*, unsigned int)’:
+binSearchTree.cpp:177:26: error: ‘void binSearchTree::fromInAndPreOrder(int*, int*, unsigned int)’ is private within this context
+  177 |     res.fromInAndPreOrder(inorder, preorder, amount - 1);
+      |     ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+binSearchTree.cpp:166:6: note: declared private here
+  166 | void binSearchTree::fromInAndPreOrder(int *inorder, int *preorder, unsigned maxIndex) {
+      |      ^~~~~~~~~~~~~

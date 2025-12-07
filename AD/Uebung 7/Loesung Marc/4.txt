@@ -1,0 +1,4 @@
+Die Formel für die Anzahl an Möglichkeiten eines minimalen AVL Baumes ist n(i-2) * n(i-1) * 2
+=> n(5) = n(4) * n(3) * 2 = 64 * 16 * 2 = 2048
+
+Die Formel für die Anzahl an Möglichkeiten eines AVL Baumes ist n(i-2) * n(i-1) * 2 + n(i-1) * n(i-1)

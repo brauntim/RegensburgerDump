@@ -1,0 +1,12 @@
+1)  2^h <= n < 2^h+1
+	h <= logn < h+1
+	h = abgerundet(logn)
+
+2)  IA: h = 0
+		Anzahl Blätter in h: n - abgerundet((n-1)-1/2) + 1 = n - abgerundet((n-2)/2) + 1 = {aufgerundet(n/2) falls n gerade; aufgerundet(n/2) falls n ungerade
+	IV: Behauptung gilt für h-1
+	IS: h-1 -> h
+		Aus dem Heap h entsteht durch Streichen aller Blätter der Heap h'. Beobachtung: jeder Knoten in h' mit h-1 hat in h die Höhe h
+		Nach IV gibt es max. aufgerundet((n - n/2)/2^h-1+1) = aufgerundet(abgerundet(n/2)/2^h) <= aufgerundet(n/2)/2^h = aufgerundet(n/2^h+1)
+
+nach 3) ja dürfte man tauschen, aber nur in derselben Höhe, nicht Höhenübergreifend

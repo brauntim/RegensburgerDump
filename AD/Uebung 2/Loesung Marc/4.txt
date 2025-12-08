@@ -1,0 +1,4 @@
+1.  lim k=>unendlich (k²/2^k)^1/k = 1/2 => konstant => O(1) richtig
+2.  stimmt, da n^m polynomiell wächst und alpha^n exponentiell
+3.  lim n=>unendlich (ln n)/(n^1,5) = 0 => n^1,5 wächst schneller => stimmt
+4.  5^(logn zur Basis 3) = n^(log5 zur basis 3) => log5 zur Basis 3 = ca 1,465 < 2 => stimmt

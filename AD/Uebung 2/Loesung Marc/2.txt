@@ -1,0 +1,8 @@
+1.	13+37+4 = 54 => konstant => O(1)
+2.	relevant für Ω ist das größte Polynom (2n³) => n³ < 2n³ => untere Schranke Ω(n³)
+3.	n^0,5 kann nicht die obere Schranke von n^1,25 sein
+4.	für n => Unendlich wird +1 irrelevant => O(4^n)
+5.	4^2n = 4^n * 4^n => stimmt nicht 
+6.	aufgelöster dominanter term => 2nlogn => 2 ist eine Konstante => 0(nlogn)
+7.	Fakultät wächst viel schneller als Exponentialfunktion => stimmt
+8.	n^n wächst schneller als n! => stimmt
